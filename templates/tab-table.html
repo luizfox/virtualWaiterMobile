@@ -1,0 +1,13 @@
+<ion-view view-title="Table">
+	<div ng-controller="TableCtrl">
+  <ion-content class="padding">
+    <h2>Welcome to VirtualWaiter</h2>
+    <p>
+			Please <a href="JavaScript:void(0)" ng-click="setTable(12)">inform your table</a> to get started
+    </p>
+		<p ng-if="data.table">
+			Your table: {{data.table}}
+		</p>
+  </ion-content>
+	</div>
+</ion-view>

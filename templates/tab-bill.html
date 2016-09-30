@@ -1,0 +1,20 @@
+<ion-view view-title="Bill and Waiter">
+  <ion-content>
+    <ion-list>
+			<ion-item class="item-remove-animate item-avatar" ng-repeat="menu in bill" type="item-text-wrap">
+	      <img ng-src="{{menu.image}}">
+	      <h2>{{menu.item.title}}</h2>
+				<h2>{{menu.qty}}</h2>
+				<h2>${{menu.item.price}}</h2>
+	      <i class="icon icon-accessory"></i>
+	    </ion-item>
+			<ion-item class="item-remove-animate item-avatar" type="item-text-wrap" ng-if="total.length > 0">
+				<p>
+					Total: ${{total[0].total}}
+				</p>
+			</ion-item>
+		</ion-list>
+		<button type="button" name="billBtn" class="button button-positive button-full" ng-click="askTheBill()">Check the bill</button>
+		<button type="button" name="orderBtn" class="button button-positive button-full" ng-click="callTheWaiter()">Call the waiter</button>
+  </ion-content>
+</ion-view>

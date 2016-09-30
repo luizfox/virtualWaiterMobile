@@ -1,0 +1,20 @@
+<!--
+title
+description
+image
+price
+id
+-->
+<ion-view view-title="Menu">
+  <ion-content>
+    <ion-list>
+			<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="menu in menus" type="item-text-wrap" href="#/tab/menu/{{menu.id}}">
+        <img ng-src="http://localhost:3000/images/{{menu.image}}">
+        <h2>{{menu.title}}</h2>
+				<h2>${{menu.price}}</h2>
+        <p>{{menu.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
